@@ -1,0 +1,59 @@
+WAP to accept Cost Price from user and ask whether the user is a student or not. If the user
+is student and cost price is greater than 500, give discount of 10% ELSE discount will be 5%. If
+user is not student and cost price is greater 500 then give discount of 8% ELSE discount will be
+2%. (Take all inputs from USER)
+
+#include<stdio.h>
+
+int main()
+{
+    float price;
+    int std;
+    float amount_paid,discount;
+    
+    printf("Enter the cost price:");
+    scanf("%f",&price);
+    
+    printf("\n enter 1 for student else 0:");
+    scanf("%d",&std);
+    
+    if(std==1)
+    {
+        if(price>=500)
+        {
+            discount = price * 0.10;
+            amount_paid = price - discount;
+            printf("\n after discount the price is:%f",amount_paid);
+        }
+        else
+        {
+             discount = price * 5/100;
+            amount_paid = price - discount;
+            printf("\n after discount the price is:%f",amount_paid);
+            
+        }
+    }
+        else
+        {
+            if(price>=500)
+            {
+                discount = price * 8/100;
+                amount_paid = price - discount;
+                printf("\n after discount the price is:%f",amount_paid);
+            }
+            else
+            {
+                 discount = price * 2/100;
+                 amount_paid = price - discount;
+                 printf("\n after discount the price is:%f",amount_paid);
+            }
+        }
+        return 0;
+        
+    }
+
+O/P -
+	Enter the cost price:400
+
+ 	enter 1 for student else 0:0
+	 after discount the price is:392.000000
